@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1314407621710BD70084A27C /* CollectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1314407521710BD70084A27C /* CollectViewController.swift */; };
+		138B1FFD21709D8100B0A782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B1FFC21709D8100B0A782 /* AppDelegate.swift */; };
+		138B1FFF21709D8100B0A782 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B1FFE21709D8100B0A782 /* MainViewController.swift */; };
+		138B200221709D8100B0A782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 138B200021709D8100B0A782 /* Main.storyboard */; };
+		138B200421709D8300B0A782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 138B200321709D8300B0A782 /* Assets.xcassets */; };
+		138B200721709D8300B0A782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 138B200521709D8300B0A782 /* LaunchScreen.storyboard */; };
+		138B20102170F0D200B0A782 /* HomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B200E2170F0D200B0A782 /* HomeFooter.swift */; };
+		138B20112170F0D200B0A782 /* HomeFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138B200F2170F0D200B0A782 /* HomeFooter.xib */; };
+		138B20152170F10D00B0A782 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B20142170F10D00B0A782 /* XibView.swift */; };
+		138B20172170F15B00B0A782 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B20162170F15B00B0A782 /* Utils.swift */; };
+		138B20202171077A00B0A782 /* UIView_Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B201F2171077A00B0A782 /* UIView_Borders.swift */; };
+		DAAC200EB067692D17C2AC05 /* Pods_bankify_hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2BEF035BE4AACF6A59489B /* Pods_bankify_hackathon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07843284951C1330FBF3D6C7 /* Pods-bankify-hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bankify-hackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bankify-hackathon/Pods-bankify-hackathon.debug.xcconfig"; sourceTree = "<group>"; };
+		1314407521710BD70084A27C /* CollectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectViewController.swift; sourceTree = "<group>"; };
+		138B1FF921709D8100B0A782 /* bankify-hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bankify-hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		138B1FFC21709D8100B0A782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		138B1FFE21709D8100B0A782 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		138B200121709D8100B0A782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		138B200321709D8300B0A782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		138B200621709D8300B0A782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		138B200821709D8300B0A782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		138B200E2170F0D200B0A782 /* HomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFooter.swift; sourceTree = "<group>"; };
+		138B200F2170F0D200B0A782 /* HomeFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeFooter.xib; sourceTree = "<group>"; };
+		138B20142170F10D00B0A782 /* XibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		138B20162170F15B00B0A782 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		138B20192171002000B0A782 /* Futura Book font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Book font.ttf"; sourceTree = "<group>"; };
+		138B201A2171002100B0A782 /* Futura Book Italic font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Book Italic font.ttf"; sourceTree = "<group>"; };
+		138B201B2171002100B0A782 /* Futura Heavy font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Heavy font.ttf"; sourceTree = "<group>"; };
+		138B201C2171002100B0A782 /* Futura Light Italic font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light Italic font.ttf"; sourceTree = "<group>"; };
+		138B201D2171002100B0A782 /* Futura Light Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light Regular.otf"; sourceTree = "<group>"; };
+		138B201E2171002100B0A782 /* Futura Light font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light font.ttf"; sourceTree = "<group>"; };
+		138B201F2171077A00B0A782 /* UIView_Borders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Borders.swift; sourceTree = "<group>"; };
+		8B6D754629A0118F483178CC /* Pods-bankify-hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bankify-hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-bankify-hackathon/Pods-bankify-hackathon.release.xcconfig"; sourceTree = "<group>"; };
+		9F2BEF035BE4AACF6A59489B /* Pods_bankify_hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bankify_hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		138B1FF621709D8100B0A782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAC200EB067692D17C2AC05 /* Pods_bankify_hackathon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		138B1FF021709D8100B0A782 = {
+			isa = PBXGroup;
+			children = (
+				138B1FFB21709D8100B0A782 /* bankify-hackathon */,
+				138B1FFA21709D8100B0A782 /* Products */,
+				77C5F69424C302DAB918E9C2 /* Pods */,
+				5FE45878F776508F904C4DAD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		138B1FFA21709D8100B0A782 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				138B1FF921709D8100B0A782 /* bankify-hackathon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		138B1FFB21709D8100B0A782 /* bankify-hackathon */ = {
+			isa = PBXGroup;
+			children = (
+				138B20182171001600B0A782 /* Font */,
+				138B20132170F0DE00B0A782 /* View */,
+				138B20122170F0D600B0A782 /* ViewController */,
+				138B1FFC21709D8100B0A782 /* AppDelegate.swift */,
+				138B200021709D8100B0A782 /* Main.storyboard */,
+				138B200321709D8300B0A782 /* Assets.xcassets */,
+				138B200521709D8300B0A782 /* LaunchScreen.storyboard */,
+				138B20162170F15B00B0A782 /* Utils.swift */,
+				138B200821709D8300B0A782 /* Info.plist */,
+			);
+			path = "bankify-hackathon";
+			sourceTree = "<group>";
+		};
+		138B20122170F0D600B0A782 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				138B1FFE21709D8100B0A782 /* MainViewController.swift */,
+				1314407521710BD70084A27C /* CollectViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		138B20132170F0DE00B0A782 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				138B201F2171077A00B0A782 /* UIView_Borders.swift */,
+				138B20142170F10D00B0A782 /* XibView.swift */,
+				138B200E2170F0D200B0A782 /* HomeFooter.swift */,
+				138B200F2170F0D200B0A782 /* HomeFooter.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		138B20182171001600B0A782 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				138B20192171002000B0A782 /* Futura Book font.ttf */,
+				138B201A2171002100B0A782 /* Futura Book Italic font.ttf */,
+				138B201B2171002100B0A782 /* Futura Heavy font.ttf */,
+				138B201E2171002100B0A782 /* Futura Light font.ttf */,
+				138B201C2171002100B0A782 /* Futura Light Italic font.ttf */,
+				138B201D2171002100B0A782 /* Futura Light Regular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		5FE45878F776508F904C4DAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F2BEF035BE4AACF6A59489B /* Pods_bankify_hackathon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77C5F69424C302DAB918E9C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07843284951C1330FBF3D6C7 /* Pods-bankify-hackathon.debug.xcconfig */,
+				8B6D754629A0118F483178CC /* Pods-bankify-hackathon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		138B1FF821709D8100B0A782 /* bankify-hackathon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 138B200B21709D8300B0A782 /* Build configuration list for PBXNativeTarget "bankify-hackathon" */;
+			buildPhases = (
+				E923B564E4AD81A27A9046FB /* [CP] Check Pods Manifest.lock */,
+				138B1FF521709D8100B0A782 /* Sources */,
+				138B1FF621709D8100B0A782 /* Frameworks */,
+				138B1FF721709D8100B0A782 /* Resources */,
+				0610A62BEA602F9F2FECBB3C /* [CP] Embed Pods Frameworks */,
+				9ED818AB6339D45F3D902F2E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "bankify-hackathon";
+			productName = "bankify-hackathon";
+			productReference = 138B1FF921709D8100B0A782 /* bankify-hackathon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		138B1FF121709D8100B0A782 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Robert Nguyen";
+				TargetAttributes = {
+					138B1FF821709D8100B0A782 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 138B1FF421709D8100B0A782 /* Build configuration list for PBXProject "bankify-hackathon" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 138B1FF021709D8100B0A782;
+			productRefGroup = 138B1FFA21709D8100B0A782 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				138B1FF821709D8100B0A782 /* bankify-hackathon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		138B1FF721709D8100B0A782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				138B200721709D8300B0A782 /* LaunchScreen.storyboard in Resources */,
+				138B200421709D8300B0A782 /* Assets.xcassets in Resources */,
+				138B200221709D8100B0A782 /* Main.storyboard in Resources */,
+				138B20112170F0D200B0A782 /* HomeFooter.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0610A62BEA602F9F2FECBB3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-bankify-hackathon/Pods-bankify-hackathon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bankify-hackathon/Pods-bankify-hackathon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ED818AB6339D45F3D902F2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bankify-hackathon/Pods-bankify-hackathon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E923B564E4AD81A27A9046FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bankify-hackathon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		138B1FF521709D8100B0A782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				138B20172170F15B00B0A782 /* Utils.swift in Sources */,
+				1314407621710BD70084A27C /* CollectViewController.swift in Sources */,
+				138B1FFF21709D8100B0A782 /* MainViewController.swift in Sources */,
+				138B20202171077A00B0A782 /* UIView_Borders.swift in Sources */,
+				138B1FFD21709D8100B0A782 /* AppDelegate.swift in Sources */,
+				138B20152170F10D00B0A782 /* XibView.swift in Sources */,
+				138B20102170F0D200B0A782 /* HomeFooter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		138B200021709D8100B0A782 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				138B200121709D8100B0A782 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		138B200521709D8300B0A782 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				138B200621709D8300B0A782 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		138B200921709D8300B0A782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		138B200A21709D8300B0A782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		138B200C21709D8300B0A782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07843284951C1330FBF3D6C7 /* Pods-bankify-hackathon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8T79M29ZC;
+				INFOPLIST_FILE = "bankify-hackathon/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sotatek.bankify-hackathon";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		138B200D21709D8300B0A782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B6D754629A0118F483178CC /* Pods-bankify-hackathon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8T79M29ZC;
+				INFOPLIST_FILE = "bankify-hackathon/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sotatek.bankify-hackathon";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		138B1FF421709D8100B0A782 /* Build configuration list for PBXProject "bankify-hackathon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				138B200921709D8300B0A782 /* Debug */,
+				138B200A21709D8300B0A782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		138B200B21709D8300B0A782 /* Build configuration list for PBXNativeTarget "bankify-hackathon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				138B200C21709D8300B0A782 /* Debug */,
+				138B200D21709D8300B0A782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 138B1FF121709D8100B0A782 /* Project object */;
+}

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeFooter" customModule="bankify_hackathon" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="mfA-d0-QNz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWR-XS-XyR" userLabel="Footer">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTf-td-Mb4">
+                            <rect key="frame" x="0.0" y="21" width="375" height="49"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mP4-hv-YKw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK6-Ek-EGM">
+                                            <rect key="frame" x="0.0" y="0.0" width="79" height="49"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="9"/>
+                                            <state key="normal" title="Home" image="homeIconNormal">
+                                                <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <state key="selected" image="homeIconActive">
+                                                <color key="titleColor" red="0.25098039220000001" green="0.73333333329999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="onSelectTab:" destination="-1" eventType="touchUpInside" id="SxM-3v-PB0"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTP-8d-Tjb">
+                                            <rect key="frame" x="79" y="0.0" width="78.5" height="49"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="9"/>
+                                            <state key="normal" title="Collect" image="collectIconNormal">
+                                                <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <state key="selected" image="scheduleIconActive">
+                                                <color key="titleColor" red="0.89411764709999997" green="0.31372549020000001" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="onSelectTab:" destination="-1" eventType="touchUpInside" id="qrJ-uL-A3S"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dlo-Tv-JV0">
+                                            <rect key="frame" x="157.5" y="0.0" width="60" height="49"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="Kb4-7e-iYT"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdA-iQ-DiM">
+                                            <rect key="frame" x="217.5" y="0.0" width="79" height="49"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <state key="normal" title="Group" image="groupIconNormal">
+                                                <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <state key="selected" image="groupIconActive">
+                                                <color key="titleColor" red="0.89411764705882346" green="0.31372549019607843" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" red="0.25098039220000001" green="0.73333333329999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="onSelectTab:" destination="-1" eventType="touchUpInside" id="TIh-Yr-QMf"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqQ-00-LWD">
+                                            <rect key="frame" x="296.5" y="0.0" width="78.5" height="49"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="9"/>
+                                            <state key="normal" title="Account" image="accIconNormal">
+                                                <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <state key="selected" image="accIconActive">
+                                                <color key="titleColor" red="0.89411764705882346" green="0.31372549019607843" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <state key="highlighted" image="menuIconActive">
+                                                <color key="titleColor" red="0.25098039220000001" green="0.73333333329999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="onSelectTab:" destination="-1" eventType="touchUpInside" id="4kf-Z2-gDf"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EK6-Ek-EGM" firstAttribute="width" secondItem="jTP-8d-Tjb" secondAttribute="width" id="6sM-tY-CFG"/>
+                                        <constraint firstItem="xdA-iQ-DiM" firstAttribute="width" secondItem="jTP-8d-Tjb" secondAttribute="width" id="Acc-bk-ylZ"/>
+                                        <constraint firstItem="mqQ-00-LWD" firstAttribute="width" secondItem="xdA-iQ-DiM" secondAttribute="width" id="CuL-Xv-AFb"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="mP4-hv-YKw" secondAttribute="bottom" id="5Dx-t9-bMW"/>
+                                <constraint firstAttribute="height" constant="49" id="Dfw-IK-64Z"/>
+                                <constraint firstAttribute="trailing" secondItem="mP4-hv-YKw" secondAttribute="trailing" id="JUf-BS-0bZ"/>
+                                <constraint firstItem="mP4-hv-YKw" firstAttribute="leading" secondItem="JTf-td-Mb4" secondAttribute="leading" id="gZU-m5-QdJ"/>
+                                <constraint firstItem="mP4-hv-YKw" firstAttribute="top" secondItem="JTf-td-Mb4" secondAttribute="top" id="hCJ-IH-VWb"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" white="0.0" alpha="0.30308219180000001" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                    <size key="value" width="1" height="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bq1-fQ-3gO">
+                            <rect key="frame" x="157.5" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Meq-GX-chd"/>
+                                <constraint firstAttribute="width" constant="60" id="MnI-bX-eng"/>
+                            </constraints>
+                            <state key="normal" image="bigSendIcon"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                    <real key="value" value="0.20000000000000001"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                    <size key="value" width="0.0" height="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onSelectCenter:" destination="-1" eventType="touchUpInside" id="4hM-U9-4hi"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Bq1-fQ-3gO" firstAttribute="centerX" secondItem="jWR-XS-XyR" secondAttribute="centerX" id="8iE-GG-Kfi"/>
+                        <constraint firstAttribute="trailing" secondItem="JTf-td-Mb4" secondAttribute="trailing" id="GXY-yh-qaY"/>
+                        <constraint firstAttribute="height" constant="70" id="LJi-AW-2w1"/>
+                        <constraint firstAttribute="bottom" secondItem="Bq1-fQ-3gO" secondAttribute="bottom" constant="10" id="S4r-3y-veb"/>
+                        <constraint firstAttribute="bottom" secondItem="JTf-td-Mb4" secondAttribute="bottom" id="azg-N8-9Eu"/>
+                        <constraint firstItem="JTf-td-Mb4" firstAttribute="leading" secondItem="jWR-XS-XyR" secondAttribute="leading" id="wkU-ZZ-YYl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="jWR-XS-XyR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="U8g-bI-7fs"/>
+                <constraint firstItem="jWR-XS-XyR" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Utb-LP-AQU"/>
+                <constraint firstItem="jWR-XS-XyR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Wv2-B2-RxA"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="accIconActive" width="22" height="22"/>
+        <image name="accIconNormal" width="22" height="22"/>
+        <image name="bigSendIcon" width="68" height="68"/>
+        <image name="collectIconNormal" width="24" height="24"/>
+        <image name="groupIconActive" width="27" height="22"/>
+        <image name="groupIconNormal" width="27" height="22"/>
+        <image name="homeIconActive" width="23" height="23"/>
+        <image name="homeIconNormal" width="23" height="23"/>
+        <image name="menuIconActive" width="24" height="24"/>
+        <image name="scheduleIconActive" width="24" height="24"/>
+    </resources>
+</document>
