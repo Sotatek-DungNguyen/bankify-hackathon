@@ -15,6 +15,7 @@ target 'bankify-hackathon' do
   pod 'Realm'
   pod 'RealmSwift'
   pod 'Arrow'
+  pod 'LUNSegmentedControl'
   # Pods for bankify-hackathon
 
 end

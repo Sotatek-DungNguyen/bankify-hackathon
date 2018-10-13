@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: AppViewController {
     
     @IBOutlet weak var footerView: HomeFooter!
     @IBOutlet weak var newActionView: NewActionView!

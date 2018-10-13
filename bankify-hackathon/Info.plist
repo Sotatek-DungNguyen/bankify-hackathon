@@ -20,6 +20,20 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Futura Book font.ttf</string>
+		<string>Futura Book Italic font.ttf</string>
+		<string>Futura Heavy font.ttf</string>
+		<string>Futura Light font.ttf</string>
+		<string>Futura Light Italic font.ttf</string>
+		<string>Futura Light Regular.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -28,6 +42,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -38,15 +54,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Futura Book font.ttf</string>
-		<string>Futura Book Italic font.ttf</string>
-		<string>Futura Heavy font.ttf</string>
-		<string>Futura Light font.ttf</string>
-		<string>Futura Light Italic font.ttf</string>
-		<string>Futura Light Regular.otf</string>
 	</array>
 </dict>
 </plist>

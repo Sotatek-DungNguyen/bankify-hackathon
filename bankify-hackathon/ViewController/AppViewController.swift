@@ -1,5 +1,5 @@
 //
-//  GroupViewController.swift
+//  AppViewController.swift
 //  bankify-hackathon
 //
 //  Created by Robert Nguyen on 10/13/18.
@@ -8,13 +8,16 @@
 
 import UIKit
 
-class GroupViewController: AppViewController {
-
+class AppViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-        self.navigationController?.tabBarController?.hidesBottomBarWhenPushed = true
     }
-
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
 }

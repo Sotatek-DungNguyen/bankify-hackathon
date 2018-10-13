@@ -8,19 +8,20 @@
 
 import UIKit
 
-class GroupDoubtViewController: UIViewController {
+class GroupDoubtViewController: AppViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lbConfim: UILabel!
+    @IBOutlet weak var btnResolve: UIButton!
 
-    fileprivate var confirmations: [ConfirmationDto] = [
-        ConfirmationDto(owerId: 1, deubtUserId: 2, amount: 1, ownerUsername: "Abc", deubtUsername: "Xyz", isConfirm: false)
-    ]
+    fileprivate var isResolve = false
+    
+    fileprivate var confirmations: [ConfirmationDto] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateConfirmLabel()
+//        updateConfirmLabel()
     }
     
     func updateConfirmLabel() {
@@ -28,8 +29,8 @@ class GroupDoubtViewController: UIViewController {
         lbConfim.text = "\(confirmAmount) / \(confirmations.count)"
     }
     
-    @IBAction func onBack(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+    @IBAction func onResolve(_ sender: UIButton) {
+        
     }
 }
 
@@ -50,23 +51,23 @@ extension GroupDoubtViewController: UITableViewDataSource, UITableViewDelegate {
         cell.delegate = self
         cell.index = indexPath.row
         
-        if confirmation.isMyTransaction {
-            if confirmation.isConfirm {
-                cell.btnConfirm.isHidden = true
-                cell.lbConfirmStat.isHidden = false
-                cell.lbConfirmStat.text = "Confirmed"
-            }
-            else {
-                cell.btnConfirm.isHidden = false
-                cell.lbConfirmStat.isHidden = true
-            }
-        }
-        else {
-            cell.btnConfirm.isHidden = true
-            cell.lbConfirmStat.isHidden = false
-            cell.lbConfirmStat.text = confirmation.isConfirm ? "Confirmed" : "Unconfirmed"
-            cell.lbConfirmStat.isHighlighted = confirmation.isConfirm
-        }
+//        if confirmation.isMyTransaction {
+//            if confirmation.isConfirm {
+//                cell.btnConfirm.isHidden = true
+//                cell.lbConfirmStat.isHidden = false
+//                cell.lbConfirmStat.text = "Confirmed"
+//            }
+//            else {
+//                cell.btnConfirm.isHidden = false
+//                cell.lbConfirmStat.isHidden = true
+//            }
+//        }
+//        else {
+//            cell.btnConfirm.isHidden = true
+//            cell.lbConfirmStat.isHidden = false
+//            cell.lbConfirmStat.text = confirmation.isConfirm ? "Confirmed" : "Unconfirmed"
+//            cell.lbConfirmStat.isHighlighted = confirmation.isConfirm
+//        }
         
         return cell
     }
@@ -74,8 +75,8 @@ extension GroupDoubtViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension GroupDoubtViewController: GroupDoubtTableViewCellDelegate {
     func onConfirm(_ cell: GroupDoubtTableViewCell) {
-        confirmations[cell.index].isConfirm = true
+//        confirmations[cell.index].isConfirm = true
         
-        updateConfirmLabel()
+//        updateConfirmLabel()
     }
 }
