@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeFooter" customModule="bankify_hackathon" customModuleProvider="target">
             <connections>
+                <outlet property="button1" destination="EK6-Ek-EGM" id="fsV-h1-gEP"/>
+                <outlet property="button2" destination="jTP-8d-Tjb" id="rrM-YG-xo4"/>
+                <outlet property="button3" destination="xdA-iQ-DiM" id="e7G-aX-5uk"/>
+                <outlet property="button4" destination="mqQ-00-LWD" id="UKM-Kz-FMj"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="mfA-d0-QNz"/>
             </connections>
         </placeholder>
@@ -34,7 +38,7 @@
                                                 <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <state key="selected" image="homeIconActive">
-                                                <color key="titleColor" red="0.25098039220000001" green="0.73333333329999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleColor" red="0.37647058820000001" green="0.76470588240000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
                                                 <action selector="onSelectTab:" destination="-1" eventType="touchUpInside" id="SxM-3v-PB0"/>
@@ -46,8 +50,8 @@
                                             <state key="normal" title="Collect" image="collectIconNormal">
                                                 <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
-                                            <state key="selected" image="scheduleIconActive">
-                                                <color key="titleColor" red="0.89411764709999997" green="0.31372549020000001" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="selected" image="collectIconActive">
+                                                <color key="titleColor" red="0.37647058820000001" green="0.76470588240000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
                                                 <action selector="onSelectTab:" destination="-1" eventType="touchUpInside" id="qrJ-uL-A3S"/>
@@ -66,7 +70,7 @@
                                                 <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <state key="selected" image="groupIconActive">
-                                                <color key="titleColor" red="0.89411764705882346" green="0.31372549019607843" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleColor" red="0.37647058820000001" green="0.76470588240000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <state key="highlighted">
                                                 <color key="titleColor" red="0.25098039220000001" green="0.73333333329999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,10 +86,7 @@
                                                 <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <state key="selected" image="accIconActive">
-                                                <color key="titleColor" red="0.89411764705882346" green="0.31372549019607843" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <state key="highlighted" image="menuIconActive">
-                                                <color key="titleColor" red="0.25098039220000001" green="0.73333333329999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleColor" red="0.37647058820000001" green="0.76470588240000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
                                                 <action selector="onSelectTab:" destination="-1" eventType="touchUpInside" id="4kf-Z2-gDf"/>
@@ -116,7 +117,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bq1-fQ-3gO">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bq1-fQ-3gO">
                             <rect key="frame" x="157.5" y="0.0" width="60" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="Meq-GX-chd"/>
@@ -128,10 +129,10 @@
                                     <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                    <real key="value" value="5"/>
+                                    <real key="value" value="2"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                    <real key="value" value="0.20000000000000001"/>
+                                    <real key="value" value="0.5"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                     <size key="value" width="0.0" height="0.0"/>
@@ -166,13 +167,12 @@
     <resources>
         <image name="accIconActive" width="22" height="22"/>
         <image name="accIconNormal" width="22" height="22"/>
-        <image name="bigSendIcon" width="68" height="68"/>
+        <image name="bigSendIcon" width="60" height="60"/>
+        <image name="collectIconActive" width="24" height="24"/>
         <image name="collectIconNormal" width="24" height="24"/>
         <image name="groupIconActive" width="27" height="22"/>
         <image name="groupIconNormal" width="27" height="22"/>
         <image name="homeIconActive" width="23" height="23"/>
         <image name="homeIconNormal" width="23" height="23"/>
-        <image name="menuIconActive" width="24" height="24"/>
-        <image name="scheduleIconActive" width="24" height="24"/>
     </resources>
 </document>

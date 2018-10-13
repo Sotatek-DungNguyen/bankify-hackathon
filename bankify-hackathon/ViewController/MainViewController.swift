@@ -9,6 +9,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    @IBOutlet weak var footerView: HomeFooter!
 
     fileprivate var internalTabBarController: UITabBarController {
         return children.first { $0 is UITabBarController } as! UITabBarController
@@ -19,6 +21,8 @@ class MainViewController: UIViewController {
         
         internalTabBarController.tabBar.isHidden = true
         internalTabBarController.tabBar.layer.zPosition = -1
+        
+        self.view.bringSubviewToFront(footerView)
     }
 }
 

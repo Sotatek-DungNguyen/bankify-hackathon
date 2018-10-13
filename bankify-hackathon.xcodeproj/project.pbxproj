@@ -18,6 +18,13 @@
 		138B20152170F10D00B0A782 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B20142170F10D00B0A782 /* XibView.swift */; };
 		138B20172170F15B00B0A782 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B20162170F15B00B0A782 /* Utils.swift */; };
 		138B20202171077A00B0A782 /* UIView_Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B201F2171077A00B0A782 /* UIView_Borders.swift */; };
+		13DA28C021711E5600B60CEA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28BF21711E5600B60CEA /* HomeViewController.swift */; };
+		13DA28C221711E6300B60CEA /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28C121711E6300B60CEA /* GroupViewController.swift */; };
+		13DA28C421711E7000B60CEA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28C321711E7000B60CEA /* ProfileViewController.swift */; };
+		13DA28C721711FDE00B60CEA /* UIGradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28C521711FDE00B60CEA /* UIGradientLabel.swift */; };
+		13DA28C821711FDE00B60CEA /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28C621711FDE00B60CEA /* UIGradientView.swift */; };
+		13DA28CA2171201500B60CEA /* UIGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28C92171201500B60CEA /* UIGradientButton.swift */; };
+		13DA28CC217126D700B60CEA /* YXWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28CB217126D700B60CEA /* YXWaveView.swift */; };
 		DAAC200EB067692D17C2AC05 /* Pods_bankify_hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2BEF035BE4AACF6A59489B /* Pods_bankify_hackathon.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +49,13 @@
 		138B201D2171002100B0A782 /* Futura Light Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light Regular.otf"; sourceTree = "<group>"; };
 		138B201E2171002100B0A782 /* Futura Light font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light font.ttf"; sourceTree = "<group>"; };
 		138B201F2171077A00B0A782 /* UIView_Borders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Borders.swift; sourceTree = "<group>"; };
+		13DA28BF21711E5600B60CEA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		13DA28C121711E6300B60CEA /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		13DA28C321711E7000B60CEA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		13DA28C521711FDE00B60CEA /* UIGradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGradientLabel.swift; sourceTree = "<group>"; };
+		13DA28C621711FDE00B60CEA /* UIGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGradientView.swift; sourceTree = "<group>"; };
+		13DA28C92171201500B60CEA /* UIGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGradientButton.swift; sourceTree = "<group>"; };
+		13DA28CB217126D700B60CEA /* YXWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXWaveView.swift; sourceTree = "<group>"; };
 		8B6D754629A0118F483178CC /* Pods-bankify-hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bankify-hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-bankify-hackathon/Pods-bankify-hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		9F2BEF035BE4AACF6A59489B /* Pods_bankify_hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bankify_hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,8 +109,11 @@
 		138B20122170F0D600B0A782 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				13DA28BF21711E5600B60CEA /* HomeViewController.swift */,
+				13DA28C121711E6300B60CEA /* GroupViewController.swift */,
 				138B1FFE21709D8100B0A782 /* MainViewController.swift */,
 				1314407521710BD70084A27C /* CollectViewController.swift */,
+				13DA28C321711E7000B60CEA /* ProfileViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -104,10 +121,14 @@
 		138B20132170F0DE00B0A782 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				13DA28C521711FDE00B60CEA /* UIGradientLabel.swift */,
+				13DA28C621711FDE00B60CEA /* UIGradientView.swift */,
+				13DA28C92171201500B60CEA /* UIGradientButton.swift */,
 				138B201F2171077A00B0A782 /* UIView_Borders.swift */,
 				138B20142170F10D00B0A782 /* XibView.swift */,
 				138B200E2170F0D200B0A782 /* HomeFooter.swift */,
 				138B200F2170F0D200B0A782 /* HomeFooter.xib */,
+				13DA28CB217126D700B60CEA /* YXWaveView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,12 +322,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13DA28C221711E6300B60CEA /* GroupViewController.swift in Sources */,
 				138B20172170F15B00B0A782 /* Utils.swift in Sources */,
+				13DA28C721711FDE00B60CEA /* UIGradientLabel.swift in Sources */,
+				13DA28C421711E7000B60CEA /* ProfileViewController.swift in Sources */,
 				1314407621710BD70084A27C /* CollectViewController.swift in Sources */,
 				138B1FFF21709D8100B0A782 /* MainViewController.swift in Sources */,
+				13DA28C021711E5600B60CEA /* HomeViewController.swift in Sources */,
 				138B20202171077A00B0A782 /* UIView_Borders.swift in Sources */,
 				138B1FFD21709D8100B0A782 /* AppDelegate.swift in Sources */,
 				138B20152170F10D00B0A782 /* XibView.swift in Sources */,
+				13DA28CC217126D700B60CEA /* YXWaveView.swift in Sources */,
+				13DA28CA2171201500B60CEA /* UIGradientButton.swift in Sources */,
+				13DA28C821711FDE00B60CEA /* UIGradientView.swift in Sources */,
 				138B20102170F0D200B0A782 /* HomeFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
