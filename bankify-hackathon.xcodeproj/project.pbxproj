@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1314407621710BD70084A27C /* CollectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1314407521710BD70084A27C /* CollectViewController.swift */; };
+		1381D64E217250BB009BAAE1 /* HTTPReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1381D64D217250BB009BAAE1 /* HTTPReponse.swift */; };
+		1381D65021725393009BAAE1 /* GroupDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1381D64F21725393009BAAE1 /* GroupDto.swift */; };
 		138B1FFD21709D8100B0A782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B1FFC21709D8100B0A782 /* AppDelegate.swift */; };
 		138B1FFF21709D8100B0A782 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B1FFE21709D8100B0A782 /* MainViewController.swift */; };
 		138B200221709D8100B0A782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 138B200021709D8100B0A782 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		07843284951C1330FBF3D6C7 /* Pods-bankify-hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bankify-hackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bankify-hackathon/Pods-bankify-hackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		1314407521710BD70084A27C /* CollectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectViewController.swift; sourceTree = "<group>"; };
+		1381D64D217250BB009BAAE1 /* HTTPReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPReponse.swift; sourceTree = "<group>"; };
+		1381D64F21725393009BAAE1 /* GroupDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDto.swift; sourceTree = "<group>"; };
 		138B1FF921709D8100B0A782 /* bankify-hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bankify-hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		138B1FFC21709D8100B0A782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		138B1FFE21709D8100B0A782 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				13F98F062171E7420096DA02 /* Confirmation.swift */,
+				1381D64D217250BB009BAAE1 /* HTTPReponse.swift */,
+				1381D64F21725393009BAAE1 /* GroupDto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 				13DA28C721711FDE00B60CEA /* UIGradientLabel.swift in Sources */,
 				13DA28C421711E7000B60CEA /* ProfileViewController.swift in Sources */,
 				1314407621710BD70084A27C /* CollectViewController.swift in Sources */,
+				1381D64E217250BB009BAAE1 /* HTTPReponse.swift in Sources */,
 				138B1FFF21709D8100B0A782 /* MainViewController.swift in Sources */,
 				13DA28C021711E5600B60CEA /* HomeViewController.swift in Sources */,
 				138B20202171077A00B0A782 /* UIView_Borders.swift in Sources */,
@@ -390,6 +397,7 @@
 				13DA28CC217126D700B60CEA /* YXWaveView.swift in Sources */,
 				13DA28CA2171201500B60CEA /* UIGradientButton.swift in Sources */,
 				13F98F0D2172469A0096DA02 /* CoSavingViewController.swift in Sources */,
+				1381D65021725393009BAAE1 /* GroupDto.swift in Sources */,
 				13DA28C821711FDE00B60CEA /* UIGradientView.swift in Sources */,
 				138B20102170F0D200B0A782 /* HomeFooter.swift in Sources */,
 			);

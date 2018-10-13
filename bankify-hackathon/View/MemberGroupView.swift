@@ -12,4 +12,9 @@ import UIKit
 class MemberGroupView: XibView {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var lbBalance: UILabel!
+    
+    func set(amount: Double, userId: Int) {
+        lbBalance.text = "\(amount)"
+        avatarImageView.image = UIImage(named: "avaUser\(userId)")
+    }
 }

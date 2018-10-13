@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 import AVFoundation
 import Alamofire
+import Arrow
 import RealmSwift
 
 func loadFontFrom(fileUrl: URL) -> (name: String, success: Bool) {
@@ -329,7 +330,27 @@ private func readTextFile(filepath: String?) -> String {
 class Utils {
     static let shared = Utils()
     
-    var userId: Int = 1
+    var userId: Int = 3
+    let unit = "$"
     
     private init() {}
+}
+
+func makeRequest(method: HTTPMethod, endPoint: String, params: Parameters? = nil, completion: @escaping (JSON?) -> Void, errorHandler: ((Error) -> Void)? = nil) {
+    request("http://103.97.124.29:8001/api/blinky/\(endPoint)", method: method, parameters: params, headers: nil)
+        .responseJSON {
+            response in
+            switch response.result {
+            case .success(let data):
+                if let httpResp = HTTPReponse(JSON(data)) {
+                    completion(httpResp.item)
+                }
+                else {
+                    errorHandler?(NSError(domain: "Error Parse JSON", code: 9999, userInfo: nil))
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+                errorHandler?(error)
+            }
+        }
 }

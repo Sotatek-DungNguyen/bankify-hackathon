@@ -11,41 +11,45 @@ import Arrow
 struct ConfirmationDto: ArrowParsable {
     init() {
         ownerId = 0
-        deubtUserId = 0
+        debtUserId = 0
         amount = 0
         _ownerUsername = ""
-        _deubtUsername = ""
+        _debtUsername = ""
         isConfirm = false
     }
     
-    init(owerId: Int, deubtUserId: Int, amount: Double, ownerUsername: String, deubtUsername: String, isConfirm: Bool) {
+    init(owerId: Int, debtUserId: Int, amount: Double, ownerUsername: String, deubtUsername: String, isConfirm: Bool) {
         self.ownerId = owerId
-        self.deubtUserId = deubtUserId
+        self.debtUserId = debtUserId
         self.amount = amount
         self._ownerUsername = ownerUsername
-        self._deubtUsername = deubtUsername
+        self._debtUsername = deubtUsername
         self.isConfirm = isConfirm
     }
     
     private var _ownerUsername: String
-    private var _deubtUsername: String
+    private var _debtUsername: String
     
     private var ownerId: Int
-    private var deubtUserId: Int
+    private var debtUserId: Int
     private(set) var amount: Double
     
     var ownerUsername: String {
         return ownerId == Utils.shared.userId ? "You" : _ownerUsername
     }
     var deubtUsername: String {
-        return deubtUserId == Utils.shared.userId ? "You" : _deubtUsername
+        return debtUserId == Utils.shared.userId ? "You" : _debtUsername
     }
     var isConfirm: Bool
     var isMyTransaction: Bool {
-        return ownerId == Utils.shared.userId || deubtUserId == Utils.shared.userId
+        return ownerId == Utils.shared.userId || debtUserId == Utils.shared.userId
     }
     
     mutating func deserialize(_ json: JSON) {
-        
+        ownerId <-- json["to"]
+        debtUserId <-- json["from"]
+        amount <-- json["amount"]
+        _ownerUsername <-- json["fromName"]
+        _debtUsername <-- json["toName"]
     }
 }
