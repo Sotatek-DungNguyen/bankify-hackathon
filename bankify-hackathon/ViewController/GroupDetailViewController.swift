@@ -29,6 +29,7 @@ class GroupDetailViewController: AppViewController {
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
         self.internalPageViewController.setViewControllers([internalViewControllers[0]], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
+        self.internalPageViewController.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
