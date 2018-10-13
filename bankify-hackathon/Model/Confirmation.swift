@@ -18,8 +18,8 @@ struct ConfirmationDto: ArrowParsable {
         isConfirm = false
     }
     
-    init(owerId: Int, debtUserId: Int, amount: Double, ownerUsername: String, deubtUsername: String, isConfirm: Bool) {
-        self.ownerId = owerId
+    init(ownerId: Int, debtUserId: Int, amount: Double, ownerUsername: String, deubtUsername: String, isConfirm: Bool) {
+        self.ownerId = ownerId
         self.debtUserId = debtUserId
         self.amount = amount
         self._ownerUsername = ownerUsername
@@ -32,7 +32,7 @@ struct ConfirmationDto: ArrowParsable {
     
     private var ownerId: Int
     private var debtUserId: Int
-    private(set) var amount: Double
+    var amount: Double
     
     var ownerUsername: String {
         return ownerId == Utils.shared.userId ? "You" : _ownerUsername
@@ -43,6 +43,9 @@ struct ConfirmationDto: ArrowParsable {
     var isConfirm: Bool
     var isMyTransaction: Bool {
         return ownerId == Utils.shared.userId || debtUserId == Utils.shared.userId
+    }
+    var isMyOwe: Bool {
+        return debtUserId == Utils.shared.userId
     }
     
     mutating func deserialize(_ json: JSON) {

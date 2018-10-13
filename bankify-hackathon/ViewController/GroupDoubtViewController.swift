@@ -58,7 +58,7 @@ class GroupDoubtViewController: AppViewController {
             let members = group.members
             for member in members {
                 for dept in member.debts {
-                    let confirmation = ConfirmationDto(owerId: dept.id, debtUserId: member.id, amount: dept.amount, ownerUsername: members.first { $0.id == dept.id }?.name ?? "", deubtUsername: member.name, isConfirm: true)
+                    let confirmation = ConfirmationDto(ownerId: dept.id, debtUserId: member.id, amount: dept.amount, ownerUsername: members.first { $0.id == dept.id }?.name ?? "", deubtUsername: member.name, isConfirm: true)
                     self.confirmations.append(confirmation)
                 }
             }
@@ -88,10 +88,11 @@ extension GroupDoubtViewController: UITableViewDataSource, UITableViewDelegate {
             cell.delegate = nil
         }
         else {
-            cell.lbTitle.text = "\(confirmation.ownerUsername) owed \(confirmation.deubtUsername) \(Utils.shared.unit)\(confirmation.amount)"
+            cell.lbTitle.text = "\(confirmation.deubtUsername) owed \(confirmation.ownerUsername) \(Utils.shared.unit)\(confirmation.amount)"
             cell.delegate = self
         }
         
+        cell.btnEdit?.isHidden = !confirmation.isMyOwe
         cell.index = indexPath.row
         
 //        if confirmation.isMyTransaction {
@@ -125,5 +126,12 @@ extension GroupDoubtViewController: GroupDoubtTableViewCellDelegate {
 //        confirmations[cell.index].isConfirm = true
         
 //        updateConfirmLabel()
+    }
+    
+    func onEdit(_ cell: GroupDoubtTableViewCell, text: String?) {
+        if let text = text, let optionalAmount = try? Double(text), let amount = optionalAmount {
+            confirmations[cell.index].amount = amount
+            self.tableView.reloadData()
+        }
     }
 }

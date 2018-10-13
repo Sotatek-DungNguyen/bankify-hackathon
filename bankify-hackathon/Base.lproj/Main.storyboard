@@ -798,12 +798,38 @@
                                                             <nil key="highlightedColor"/>
                                                             <size key="shadowOffset" width="0.0" height="0.0"/>
                                                         </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1vl-KT-Zl3">
+                                                            <rect key="frame" x="8" y="19.5" width="201" height="19"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkd-8t-aGG">
+                                                            <rect key="frame" x="214" y="9" width="121" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="kxC-Ot-Ubo"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                            <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                                            <state key="normal" title="Edit" backgroundImage="confirmBackgroundActive">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <state key="selected" title="OK"/>
+                                                            <connections>
+                                                                <action selector="onEdit:" destination="c9l-0S-mbk" eventType="touchUpInside" id="EHG-JC-5A1"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c9K-Ps-3LF" secondAttribute="trailing" constant="8" id="Iof-Xr-OhE"/>
+                                                        <constraint firstItem="1vl-KT-Zl3" firstAttribute="leading" secondItem="p26-fL-nJ3" secondAttribute="leading" constant="8" id="3Fq-8L-C1O"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Tkd-8t-aGG" secondAttribute="trailing" constant="8" id="7ee-gN-seR"/>
+                                                        <constraint firstItem="Tkd-8t-aGG" firstAttribute="centerY" secondItem="p26-fL-nJ3" secondAttribute="centerY" id="VdK-a0-Lds"/>
+                                                        <constraint firstItem="Tkd-8t-aGG" firstAttribute="leading" secondItem="1vl-KT-Zl3" secondAttribute="trailing" constant="5" id="W4a-b3-fFD"/>
                                                         <constraint firstItem="c9K-Ps-3LF" firstAttribute="leading" secondItem="p26-fL-nJ3" secondAttribute="leading" constant="8" id="Yoo-KE-aYq"/>
                                                         <constraint firstItem="c9K-Ps-3LF" firstAttribute="centerY" secondItem="p26-fL-nJ3" secondAttribute="centerY" id="dTm-Oy-b9H"/>
+                                                        <constraint firstItem="Tkd-8t-aGG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c9K-Ps-3LF" secondAttribute="trailing" constant="10" id="efg-Kj-pub"/>
+                                                        <constraint firstItem="1vl-KT-Zl3" firstAttribute="centerY" secondItem="p26-fL-nJ3" secondAttribute="centerY" id="fcS-wG-0HW"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -829,7 +855,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnEdit" destination="Tkd-8t-aGG" id="DmK-Ke-lLg"/>
                                             <outlet property="lbTitle" destination="c9K-Ps-3LF" id="kli-T4-EIN"/>
+                                            <outlet property="textField" destination="1vl-KT-Zl3" id="O3z-DJ-cfe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
