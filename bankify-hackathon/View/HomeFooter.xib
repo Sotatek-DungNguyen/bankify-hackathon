@@ -34,7 +34,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK6-Ek-EGM">
                                             <rect key="frame" x="0.0" y="0.0" width="79" height="49"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="9"/>
-                                            <state key="normal" title="Home" image="homeIconNormal">
+                                            <state key="normal" title="Goal" image="homeIconNormal">
                                                 <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <state key="selected" image="homeIconActive">
@@ -44,27 +44,8 @@
                                                 <action selector="onSelectTab:" destination="-1" eventType="touchUpInside" id="SxM-3v-PB0"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTP-8d-Tjb">
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdA-iQ-DiM">
                                             <rect key="frame" x="79" y="0.0" width="78.5" height="49"/>
-                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="9"/>
-                                            <state key="normal" title="Collect" image="collectIconNormal">
-                                                <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <state key="selected" image="collectIconActive">
-                                                <color key="titleColor" red="0.37647058820000001" green="0.76470588240000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="onSelectTab:" destination="-1" eventType="touchUpInside" id="qrJ-uL-A3S"/>
-                                            </connections>
-                                        </button>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dlo-Tv-JV0">
-                                            <rect key="frame" x="157.5" y="0.0" width="60" height="49"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="60" id="Kb4-7e-iYT"/>
-                                            </constraints>
-                                        </view>
-                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdA-iQ-DiM">
-                                            <rect key="frame" x="217.5" y="0.0" width="79" height="49"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                             <state key="normal" title="Group" image="groupIconNormal">
                                                 <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,6 +58,25 @@
                                             </state>
                                             <connections>
                                                 <action selector="onSelectTab:" destination="-1" eventType="touchUpInside" id="TIh-Yr-QMf"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dlo-Tv-JV0">
+                                            <rect key="frame" x="157.5" y="0.0" width="60" height="49"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="Kb4-7e-iYT"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTP-8d-Tjb">
+                                            <rect key="frame" x="217.5" y="0.0" width="79" height="49"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="9"/>
+                                            <state key="normal" title="Collect" image="collectIconNormal">
+                                                <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <state key="selected" image="collectIconActive">
+                                                <color key="titleColor" red="0.37647058820000001" green="0.76470588240000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="onSelectTab:" destination="-1" eventType="touchUpInside" id="qrJ-uL-A3S"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqQ-00-LWD">
@@ -172,7 +172,7 @@
         <image name="collectIconNormal" width="24" height="24"/>
         <image name="groupIconActive" width="27" height="22"/>
         <image name="groupIconNormal" width="27" height="22"/>
-        <image name="homeIconActive" width="23" height="23"/>
-        <image name="homeIconNormal" width="23" height="23"/>
+        <image name="homeIconActive" width="18" height="24"/>
+        <image name="homeIconNormal" width="18" height="24"/>
     </resources>
 </document>

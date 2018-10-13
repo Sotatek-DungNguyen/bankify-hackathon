@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var footerView: HomeFooter!
+    @IBOutlet weak var newActionView: NewActionView!
 
     fileprivate var internalTabBarController: UITabBarController {
         return children.first { $0 is UITabBarController } as! UITabBarController
@@ -23,6 +24,14 @@ class MainViewController: UIViewController {
         internalTabBarController.tabBar.layer.zPosition = -1
         
         self.view.bringSubviewToFront(footerView)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onTap(_:)))
+        tapGesture.cancelsTouchesInView = true
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func onTap(_ gesture: UITapGestureRecognizer) {
+        newActionView.isHidden = true
     }
 }
 
@@ -32,6 +41,18 @@ extension MainViewController: HomeFooterDelegate {
     }
     
     func onShowMain() {
+        if internalTabBarController.selectedIndex > 1 {
+            newActionView.isHidden = !newActionView.isHidden
+        }
+    }
+}
+
+extension MainViewController: NewActionViewDelegate {
+    func onNewGoal(_ footer: NewActionView) {
+        
+    }
+    
+    func onNewActivity(_ footer: NewActionView) {
         
     }
 }

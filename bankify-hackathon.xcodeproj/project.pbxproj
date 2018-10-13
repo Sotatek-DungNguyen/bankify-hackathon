@@ -18,6 +18,8 @@
 		138B20152170F10D00B0A782 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B20142170F10D00B0A782 /* XibView.swift */; };
 		138B20172170F15B00B0A782 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B20162170F15B00B0A782 /* Utils.swift */; };
 		138B20202171077A00B0A782 /* UIView_Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B201F2171077A00B0A782 /* UIView_Borders.swift */; };
+		138D0F1D2171C21600E1FB78 /* NewActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138D0F1C2171C21600E1FB78 /* NewActionView.swift */; };
+		138D0F1F2171C22400E1FB78 /* NewActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138D0F1E2171C22400E1FB78 /* NewActionView.xib */; };
 		13DA28C021711E5600B60CEA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28BF21711E5600B60CEA /* HomeViewController.swift */; };
 		13DA28C221711E6300B60CEA /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28C121711E6300B60CEA /* GroupViewController.swift */; };
 		13DA28C421711E7000B60CEA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28C321711E7000B60CEA /* ProfileViewController.swift */; };
@@ -25,6 +27,9 @@
 		13DA28C821711FDE00B60CEA /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28C621711FDE00B60CEA /* UIGradientView.swift */; };
 		13DA28CA2171201500B60CEA /* UIGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28C92171201500B60CEA /* UIGradientButton.swift */; };
 		13DA28CC217126D700B60CEA /* YXWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28CB217126D700B60CEA /* YXWaveView.swift */; };
+		13DA28CE2171955B00B60CEA /* MemberGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28CD2171955B00B60CEA /* MemberGroupView.swift */; };
+		13DA28D02171957100B60CEA /* MemberGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13DA28CF2171957100B60CEA /* MemberGroupView.xib */; };
+		13DA28D22171998500B60CEA /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28D12171998500B60CEA /* GroupDetailViewController.swift */; };
 		DAAC200EB067692D17C2AC05 /* Pods_bankify_hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2BEF035BE4AACF6A59489B /* Pods_bankify_hackathon.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +54,8 @@
 		138B201D2171002100B0A782 /* Futura Light Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light Regular.otf"; sourceTree = "<group>"; };
 		138B201E2171002100B0A782 /* Futura Light font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Light font.ttf"; sourceTree = "<group>"; };
 		138B201F2171077A00B0A782 /* UIView_Borders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Borders.swift; sourceTree = "<group>"; };
+		138D0F1C2171C21600E1FB78 /* NewActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActionView.swift; sourceTree = "<group>"; };
+		138D0F1E2171C22400E1FB78 /* NewActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewActionView.xib; sourceTree = "<group>"; };
 		13DA28BF21711E5600B60CEA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		13DA28C121711E6300B60CEA /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		13DA28C321711E7000B60CEA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +63,9 @@
 		13DA28C621711FDE00B60CEA /* UIGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGradientView.swift; sourceTree = "<group>"; };
 		13DA28C92171201500B60CEA /* UIGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGradientButton.swift; sourceTree = "<group>"; };
 		13DA28CB217126D700B60CEA /* YXWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXWaveView.swift; sourceTree = "<group>"; };
+		13DA28CD2171955B00B60CEA /* MemberGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberGroupView.swift; sourceTree = "<group>"; };
+		13DA28CF2171957100B60CEA /* MemberGroupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberGroupView.xib; sourceTree = "<group>"; };
+		13DA28D12171998500B60CEA /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
 		8B6D754629A0118F483178CC /* Pods-bankify-hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bankify-hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-bankify-hackathon/Pods-bankify-hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		9F2BEF035BE4AACF6A59489B /* Pods_bankify_hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bankify_hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +124,7 @@
 				138B1FFE21709D8100B0A782 /* MainViewController.swift */,
 				1314407521710BD70084A27C /* CollectViewController.swift */,
 				13DA28C321711E7000B60CEA /* ProfileViewController.swift */,
+				13DA28D12171998500B60CEA /* GroupDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -129,6 +140,10 @@
 				138B200E2170F0D200B0A782 /* HomeFooter.swift */,
 				138B200F2170F0D200B0A782 /* HomeFooter.xib */,
 				13DA28CB217126D700B60CEA /* YXWaveView.swift */,
+				13DA28CD2171955B00B60CEA /* MemberGroupView.swift */,
+				13DA28CF2171957100B60CEA /* MemberGroupView.xib */,
+				138D0F1C2171C21600E1FB78 /* NewActionView.swift */,
+				138D0F1E2171C22400E1FB78 /* NewActionView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,8 +239,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13DA28D02171957100B60CEA /* MemberGroupView.xib in Resources */,
 				138B200721709D8300B0A782 /* LaunchScreen.storyboard in Resources */,
 				138B200421709D8300B0A782 /* Assets.xcassets in Resources */,
+				138D0F1F2171C22400E1FB78 /* NewActionView.xib in Resources */,
 				138B200221709D8100B0A782 /* Main.storyboard in Resources */,
 				138B20112170F0D200B0A782 /* HomeFooter.xib in Resources */,
 			);
@@ -323,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13DA28C221711E6300B60CEA /* GroupViewController.swift in Sources */,
+				138D0F1D2171C21600E1FB78 /* NewActionView.swift in Sources */,
 				138B20172170F15B00B0A782 /* Utils.swift in Sources */,
 				13DA28C721711FDE00B60CEA /* UIGradientLabel.swift in Sources */,
 				13DA28C421711E7000B60CEA /* ProfileViewController.swift in Sources */,
@@ -331,6 +349,8 @@
 				13DA28C021711E5600B60CEA /* HomeViewController.swift in Sources */,
 				138B20202171077A00B0A782 /* UIView_Borders.swift in Sources */,
 				138B1FFD21709D8100B0A782 /* AppDelegate.swift in Sources */,
+				13DA28D22171998500B60CEA /* GroupDetailViewController.swift in Sources */,
+				13DA28CE2171955B00B60CEA /* MemberGroupView.swift in Sources */,
 				138B20152170F10D00B0A782 /* XibView.swift in Sources */,
 				13DA28CC217126D700B60CEA /* YXWaveView.swift in Sources */,
 				13DA28CA2171201500B60CEA /* UIGradientButton.swift in Sources */,
