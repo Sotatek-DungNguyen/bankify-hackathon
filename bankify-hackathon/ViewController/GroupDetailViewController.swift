@@ -77,6 +77,6 @@ extension GroupDetailViewController: LUNSegmentedControlDelegate, LUNSegmentedCo
     }
     
     func segmentedControl(_ segmentedControl: LUNSegmentedControl!, didChangeStateFromStateAt fromIndex: Int, toStateAt toIndex: Int) {
-        self.internalPageViewController.setViewControllers([internalViewControllers[toIndex]], direction: (fromIndex < toIndex) ? .forward : .reserved, animated: true, completion: nil)
+        self.internalPageViewController.setViewControllers([internalViewControllers[toIndex]], direction: (fromIndex < toIndex) ? .forward : .reverse, animated: true, completion: nil)
     }
 }
