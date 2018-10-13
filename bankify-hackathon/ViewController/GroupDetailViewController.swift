@@ -30,6 +30,8 @@ class GroupDetailViewController: AppViewController {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
         self.internalPageViewController.setViewControllers([internalViewControllers[0]], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
         self.internalPageViewController.delegate = self
+        self.internalPageViewController.dataSource = self
+        self.segmentControl.shadowsEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +62,12 @@ extension GroupDetailViewController: UIPageViewControllerDataSource, UIPageViewC
         }
         
         return nil
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if let vc = previousViewControllers.first, let index = internalViewControllers.firstIndex(of: vc) {
+            self.segmentControl.currentState = 1 - index
+        }
     }
 }
 

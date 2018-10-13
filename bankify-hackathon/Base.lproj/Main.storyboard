@@ -647,14 +647,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfE-96-k9k">
-                                <rect key="frame" x="306" y="10" width="69" height="40"/>
+                                <rect key="frame" x="153" y="602" width="69" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3Bc-an-YmK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <state key="normal" title="Resolve">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.37647058820000001" green="0.76470588240000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onResolve:" destination="TLx-A6-7cn" eventType="touchUpInside" id="2Xa-r1-o2u"/>
@@ -678,7 +678,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" estimatedRowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NvL-lc-6jt">
-                                <rect key="frame" x="0.0" y="39.5" width="375" height="627.5"/>
+                                <rect key="frame" x="0.0" y="39.5" width="375" height="552.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="KYj-E4-6ZW" customClass="GroupDoubtTableViewCell" customModule="bankify_hackathon" customModuleProvider="target">
@@ -768,14 +768,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mrG-6I-ueB" firstAttribute="bottom" secondItem="dfE-96-k9k" secondAttribute="bottom" constant="25" id="4FR-WQ-hFI"/>
                             <constraint firstItem="NvL-lc-6jt" firstAttribute="top" secondItem="Dts-dp-wo5" secondAttribute="bottom" id="KSe-gD-FWO"/>
                             <constraint firstItem="Dts-dp-wo5" firstAttribute="top" secondItem="mrG-6I-ueB" secondAttribute="top" id="XGd-Ad-Waj"/>
                             <constraint firstItem="Dts-dp-wo5" firstAttribute="centerX" secondItem="mrG-6I-ueB" secondAttribute="centerX" id="Z1h-cX-DcS"/>
-                            <constraint firstItem="mrG-6I-ueB" firstAttribute="trailing" secondItem="dfE-96-k9k" secondAttribute="trailing" id="afh-Ne-97u"/>
+                            <constraint firstItem="dfE-96-k9k" firstAttribute="centerX" secondItem="mrG-6I-ueB" secondAttribute="centerX" id="aSG-P7-5WF"/>
                             <constraint firstItem="NvL-lc-6jt" firstAttribute="leading" secondItem="mrG-6I-ueB" secondAttribute="leading" id="bqz-DT-3tQ"/>
-                            <constraint firstItem="dfE-96-k9k" firstAttribute="centerY" secondItem="Dts-dp-wo5" secondAttribute="centerY" id="dMs-AD-DgT"/>
+                            <constraint firstItem="dfE-96-k9k" firstAttribute="top" secondItem="NvL-lc-6jt" secondAttribute="bottom" constant="10" id="iCe-um-nMY"/>
                             <constraint firstItem="mrG-6I-ueB" firstAttribute="trailing" secondItem="NvL-lc-6jt" secondAttribute="trailing" id="o1Z-XF-qve"/>
-                            <constraint firstItem="mrG-6I-ueB" firstAttribute="bottom" secondItem="NvL-lc-6jt" secondAttribute="bottom" id="pjA-ph-RuV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mrG-6I-ueB"/>
                     </view>
@@ -787,7 +787,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPL-fW-0qX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3967" y="667"/>
+            <point key="canvasLocation" x="3965.5999999999999" y="666.11694152923542"/>
         </scene>
         <!--Account-->
         <scene sceneID="aQ7-1l-bPp">
