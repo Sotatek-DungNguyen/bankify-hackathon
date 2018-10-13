@@ -325,3 +325,11 @@ private func readTextFile(filepath: String?) -> String {
     }
     return ""
 }
+
+class Utils {
+    static let shared = Utils()
+    
+    var userId: Int = 1
+    
+    private init() {}
+}

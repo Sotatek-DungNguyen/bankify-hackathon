@@ -20,6 +20,8 @@
 		138B20202171077A00B0A782 /* UIView_Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B201F2171077A00B0A782 /* UIView_Borders.swift */; };
 		138D0F1D2171C21600E1FB78 /* NewActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138D0F1C2171C21600E1FB78 /* NewActionView.swift */; };
 		138D0F1F2171C22400E1FB78 /* NewActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138D0F1E2171C22400E1FB78 /* NewActionView.xib */; };
+		138D0F212171D72900E1FB78 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138D0F202171D72900E1FB78 /* ActivitiesViewController.swift */; };
+		138D0F232171E1DC00E1FB78 /* GroupDoubtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138D0F222171E1DC00E1FB78 /* GroupDoubtViewController.swift */; };
 		13DA28C021711E5600B60CEA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28BF21711E5600B60CEA /* HomeViewController.swift */; };
 		13DA28C221711E6300B60CEA /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28C121711E6300B60CEA /* GroupViewController.swift */; };
 		13DA28C421711E7000B60CEA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28C321711E7000B60CEA /* ProfileViewController.swift */; };
@@ -30,6 +32,8 @@
 		13DA28CE2171955B00B60CEA /* MemberGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28CD2171955B00B60CEA /* MemberGroupView.swift */; };
 		13DA28D02171957100B60CEA /* MemberGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13DA28CF2171957100B60CEA /* MemberGroupView.xib */; };
 		13DA28D22171998500B60CEA /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DA28D12171998500B60CEA /* GroupDetailViewController.swift */; };
+		13F98F072171E7420096DA02 /* Confirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F98F062171E7420096DA02 /* Confirmation.swift */; };
+		13F98F092171E7CC0096DA02 /* GroupDoubtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F98F082171E7CC0096DA02 /* GroupDoubtTableViewCell.swift */; };
 		DAAC200EB067692D17C2AC05 /* Pods_bankify_hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2BEF035BE4AACF6A59489B /* Pods_bankify_hackathon.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,8 @@
 		138B201F2171077A00B0A782 /* UIView_Borders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Borders.swift; sourceTree = "<group>"; };
 		138D0F1C2171C21600E1FB78 /* NewActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActionView.swift; sourceTree = "<group>"; };
 		138D0F1E2171C22400E1FB78 /* NewActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewActionView.xib; sourceTree = "<group>"; };
+		138D0F202171D72900E1FB78 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		138D0F222171E1DC00E1FB78 /* GroupDoubtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDoubtViewController.swift; sourceTree = "<group>"; };
 		13DA28BF21711E5600B60CEA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		13DA28C121711E6300B60CEA /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		13DA28C321711E7000B60CEA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,8 @@
 		13DA28CD2171955B00B60CEA /* MemberGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberGroupView.swift; sourceTree = "<group>"; };
 		13DA28CF2171957100B60CEA /* MemberGroupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberGroupView.xib; sourceTree = "<group>"; };
 		13DA28D12171998500B60CEA /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
+		13F98F062171E7420096DA02 /* Confirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Confirmation.swift; sourceTree = "<group>"; };
+		13F98F082171E7CC0096DA02 /* GroupDoubtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDoubtTableViewCell.swift; sourceTree = "<group>"; };
 		8B6D754629A0118F483178CC /* Pods-bankify-hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bankify-hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-bankify-hackathon/Pods-bankify-hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		9F2BEF035BE4AACF6A59489B /* Pods_bankify_hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bankify_hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,6 +111,7 @@
 		138B1FFB21709D8100B0A782 /* bankify-hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				13F98F052171E7300096DA02 /* Model */,
 				138B20182171001600B0A782 /* Font */,
 				138B20132170F0DE00B0A782 /* View */,
 				138B20122170F0D600B0A782 /* ViewController */,
@@ -125,6 +134,9 @@
 				1314407521710BD70084A27C /* CollectViewController.swift */,
 				13DA28C321711E7000B60CEA /* ProfileViewController.swift */,
 				13DA28D12171998500B60CEA /* GroupDetailViewController.swift */,
+				138D0F202171D72900E1FB78 /* ActivitiesViewController.swift */,
+				138D0F222171E1DC00E1FB78 /* GroupDoubtViewController.swift */,
+				13F98F082171E7CC0096DA02 /* GroupDoubtTableViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -159,6 +171,14 @@
 				138B201D2171002100B0A782 /* Futura Light Regular.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		13F98F052171E7300096DA02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13F98F062171E7420096DA02 /* Confirmation.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5FE45878F776508F904C4DAD /* Frameworks */ = {
@@ -261,6 +281,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-bankify-hackathon/Pods-bankify-hackathon-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Arrow/Arrow.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -276,6 +297,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Arrow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -341,6 +363,7 @@
 			files = (
 				13DA28C221711E6300B60CEA /* GroupViewController.swift in Sources */,
 				138D0F1D2171C21600E1FB78 /* NewActionView.swift in Sources */,
+				13F98F072171E7420096DA02 /* Confirmation.swift in Sources */,
 				138B20172170F15B00B0A782 /* Utils.swift in Sources */,
 				13DA28C721711FDE00B60CEA /* UIGradientLabel.swift in Sources */,
 				13DA28C421711E7000B60CEA /* ProfileViewController.swift in Sources */,
@@ -348,10 +371,13 @@
 				138B1FFF21709D8100B0A782 /* MainViewController.swift in Sources */,
 				13DA28C021711E5600B60CEA /* HomeViewController.swift in Sources */,
 				138B20202171077A00B0A782 /* UIView_Borders.swift in Sources */,
+				13F98F092171E7CC0096DA02 /* GroupDoubtTableViewCell.swift in Sources */,
 				138B1FFD21709D8100B0A782 /* AppDelegate.swift in Sources */,
 				13DA28D22171998500B60CEA /* GroupDetailViewController.swift in Sources */,
 				13DA28CE2171955B00B60CEA /* MemberGroupView.swift in Sources */,
 				138B20152170F10D00B0A782 /* XibView.swift in Sources */,
+				138D0F232171E1DC00E1FB78 /* GroupDoubtViewController.swift in Sources */,
+				138D0F212171D72900E1FB78 /* ActivitiesViewController.swift in Sources */,
 				13DA28CC217126D700B60CEA /* YXWaveView.swift in Sources */,
 				13DA28CA2171201500B60CEA /* UIGradientButton.swift in Sources */,
 				13DA28C821711FDE00B60CEA /* UIGradientView.swift in Sources */,

@@ -14,6 +14,7 @@ target 'bankify-hackathon' do
   pod 'SnapKit'
   pod 'Realm'
   pod 'RealmSwift'
+  pod 'Arrow'
   # Pods for bankify-hackathon
 
 end
