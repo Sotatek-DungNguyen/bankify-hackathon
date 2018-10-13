@@ -11,15 +11,27 @@ import Arrow
 struct GroupDto: ArrowParsable {
     var name: String
     var members: [MemberDto]
+    var credits: [Credit]
     
     init() {
         name = ""
         members = []
+        credits = []
     }
     
     mutating func deserialize(_ json: JSON) {
         name <-- json["name"]
         members <-- json["member"]
+        credits <-- json["credits"]
+        
+        let dict = Dictionary(grouping: credits, by: { $0.id })
+        var oMembers: [MemberDto] = []
+        for member in members {
+            var _member = member
+            _member.amount = dict[member.id]?[0].amount ?? 0
+            oMembers.append(_member)
+        }
+        members = oMembers
     }
 }
 
@@ -45,11 +57,25 @@ struct MemberDto: ArrowParsable {
         var rawDebts: [Debt] = []
         rawDebts <-- json["debts"]
         debts = rawDebts.filter { $0.amount > 0 }
-        amount <-- json["amount"]
     }
 }
 
 struct Debt: ArrowParsable {
+    mutating func deserialize(_ json: JSON) {
+        id <-- json["id"]
+        amount <-- json["amount"]
+    }
+    
+    var id: Int
+    var amount: Double
+    
+    init() {
+        id = -1
+        amount = 0
+    }
+}
+
+struct Credit: ArrowParsable {
     mutating func deserialize(_ json: JSON) {
         id <-- json["id"]
         amount <-- json["amount"]

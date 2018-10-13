@@ -13,6 +13,14 @@ class MemberGroupView: XibView {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var lbBalance: UILabel!
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     func set(amount: Double, userId: Int) {
         lbBalance.text = "\(amount)"
         avatarImageView.image = UIImage(named: "avaUser\(userId)")
