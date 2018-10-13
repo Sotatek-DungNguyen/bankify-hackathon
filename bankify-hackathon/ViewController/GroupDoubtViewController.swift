@@ -27,6 +27,10 @@ class GroupDoubtViewController: UIViewController {
         let confirmAmount = confirmations.filter { $0.isConfirm }.count
         lbConfim.text = "\(confirmAmount) / \(confirmations.count)"
     }
+    
+    @IBAction func onBack(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension GroupDoubtViewController: UITableViewDataSource, UITableViewDelegate {
