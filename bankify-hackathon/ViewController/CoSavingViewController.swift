@@ -19,8 +19,8 @@ class CoSavingViewController: UIViewController {
     private var isDataLoaded = false
     private var isDataLoading = false
     
-    private let xOffset = [10, 200, 100, 300, 250]
-    private let yOffset = [10, 20, 300, 190, 50]
+    private let xOffset = [40, 200, 100, 290, 250]
+    private let yOffset = [40, 20, 300, 190, 50]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,9 +59,9 @@ class CoSavingViewController: UIViewController {
         
         let center = centerView.center
         for (index, member) in group.members.enumerated() {
-            addLine(fromPoint: CGPoint(x: xOffset[index] + 15, y: yOffset[index] + 41), toPoint: center)
+            addLine(fromPoint: CGPoint(x: xOffset[index] + 25, y: yOffset[index] + 55), toPoint: center)
             
-            let view = MemberGroupView(frame: CGRect(x: xOffset[index], y: yOffset[index], width: 57, height: 56))
+            let view = MemberGroupView(frame: CGRect(x: xOffset[index], y: yOffset[index], width: 80, height: 80))
             view.backgroundColor = .clear
             view.clipsToBounds = true
             view.layer.masksToBounds = true
