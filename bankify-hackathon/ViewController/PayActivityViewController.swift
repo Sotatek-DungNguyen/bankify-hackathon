@@ -32,6 +32,8 @@ class PayActivityViewController: AppViewController {
             [weak self] json in
             guard let `self` = self else { return }
             self.isPaid = true
+            
+            print("Pay OK")
         })
     }
     
