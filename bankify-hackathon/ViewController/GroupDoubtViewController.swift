@@ -112,7 +112,7 @@ extension GroupDoubtViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textField.isHidden = true
         
         if isResolve {
-            cell.lbTitle.text = "\(confirmation.ownerUsername) must send \(Utils.shared.unit)\(confirmation.amount) to \(confirmation.debtUsername)"
+            cell.lbTitle.text = "\(confirmation.debtUsername) must send \(Utils.shared.unit)\(confirmation.amount) to \(confirmation.ownerUsername)"
             cell.delegate = nil
             cell.btnEdit?.isHidden = true
         }
