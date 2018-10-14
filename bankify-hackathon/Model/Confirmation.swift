@@ -52,7 +52,7 @@ struct ConfirmationDto: ArrowParsable {
         ownerId <-- json["to"]
         debtUserId <-- json["from"]
         amount <-- json["amount"]
-        _ownerUsername <-- json["fromName"]
-        _debtUsername <-- json["toName"]
+        _ownerUsername <-- json["toName"]
+        _debtUsername <-- json["fromName"]
     }
 }
