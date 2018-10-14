@@ -74,6 +74,7 @@ class GroupDoubtViewController: AppViewController {
             group <-- json
             let members = group.members
             self.confirmations = []
+            self.isResolve = false
             for member in members {
                 for dept in member.debts {
                     let confirmation = ConfirmationDto(ownerId: dept.id, debtUserId: member.id, amount: dept.amount, ownerUsername: members.first { $0.id == dept.id }?.name ?? "", deubtUsername: member.name, isConfirm: true)
