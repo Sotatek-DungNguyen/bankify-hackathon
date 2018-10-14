@@ -97,7 +97,7 @@ extension GroupDetailViewController: LUNSegmentedControlDelegate, LUNSegmentedCo
     func segmentedControl(_ segmentedControl: LUNSegmentedControl!, attributedTitleForStateAt index: Int) -> NSAttributedString! {
         switch index {
         case 0:
-            return NSMutableAttributedString(string: "Co-saving", attributes: [
+            return NSMutableAttributedString(string: "Fund", attributes: [
                 .font: UIFont(name: "Futura", size: 14)
             ])
         default:
