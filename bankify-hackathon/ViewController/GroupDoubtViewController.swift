@@ -164,21 +164,18 @@ extension GroupDoubtViewController: GroupDoubtTableViewCellDelegate {
                 "id": Utils.shared.userId
             ]
             
-            var debts: [[String: Any]] = []
+            var debts: [String] = []
             let owes = confirmations.filter { $0.isMyOwe }
             for owe in owes {
-                let debt = [
-                    "id": owe.ownerId,
-                    "amount": owe.amount
-                    ] as [String : Any]
+                let debt = "{\"id\":\(owe.ownerId),\"amount\":\(owe.amount)}"
                 debts.append(debt)
             }
             
-            params["debts"] = debts
+            params["debts"] = "[" + debts.joined(separator: ",") + "]"
             
             makeRequest(method: .post, endPoint: "updategroup", params: params, completion: {
                 json in
-                
+                print("Update OK")
             })
         }
     }

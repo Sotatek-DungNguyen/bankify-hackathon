@@ -45,6 +45,19 @@ class GroupDetailViewController: AppViewController {
     @IBAction func onBack(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func onPayEvent(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PayActivityViewController") as! PayActivityViewController
+        
+        vc.onDismiss = {
+            [weak self] isPaid in
+            if isPaid {
+                (self?.internalViewControllers[0] as? CoSavingViewController)?.loadData()
+            }
+        }
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension GroupDetailViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {

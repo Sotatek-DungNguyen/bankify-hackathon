@@ -10,6 +10,7 @@
 		1314407621710BD70084A27C /* CollectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1314407521710BD70084A27C /* CollectViewController.swift */; };
 		1381D64E217250BB009BAAE1 /* HTTPReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1381D64D217250BB009BAAE1 /* HTTPReponse.swift */; };
 		1381D65021725393009BAAE1 /* GroupDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1381D64F21725393009BAAE1 /* GroupDto.swift */; };
+		1381D6522172D869009BAAE1 /* PayActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1381D6512172D869009BAAE1 /* PayActivityViewController.swift */; };
 		138B1FFD21709D8100B0A782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B1FFC21709D8100B0A782 /* AppDelegate.swift */; };
 		138B1FFF21709D8100B0A782 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B1FFE21709D8100B0A782 /* MainViewController.swift */; };
 		138B200221709D8100B0A782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 138B200021709D8100B0A782 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		1314407521710BD70084A27C /* CollectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectViewController.swift; sourceTree = "<group>"; };
 		1381D64D217250BB009BAAE1 /* HTTPReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPReponse.swift; sourceTree = "<group>"; };
 		1381D64F21725393009BAAE1 /* GroupDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDto.swift; sourceTree = "<group>"; };
+		1381D6512172D869009BAAE1 /* PayActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayActivityViewController.swift; sourceTree = "<group>"; };
 		138B1FF921709D8100B0A782 /* bankify-hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bankify-hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		138B1FFC21709D8100B0A782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		138B1FFE21709D8100B0A782 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				13F98F082171E7CC0096DA02 /* GroupDoubtTableViewCell.swift */,
 				13F98F0A2172463C0096DA02 /* AppViewController.swift */,
 				13F98F0C2172469A0096DA02 /* CoSavingViewController.swift */,
+				1381D6512172D869009BAAE1 /* PayActivityViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				138D0F232171E1DC00E1FB78 /* GroupDoubtViewController.swift in Sources */,
 				138D0F212171D72900E1FB78 /* ActivitiesViewController.swift in Sources */,
 				13DA28CC217126D700B60CEA /* YXWaveView.swift in Sources */,
+				1381D6522172D869009BAAE1 /* PayActivityViewController.swift in Sources */,
 				13DA28CA2171201500B60CEA /* UIGradientButton.swift in Sources */,
 				13F98F0D2172469A0096DA02 /* CoSavingViewController.swift in Sources */,
 				1381D65021725393009BAAE1 /* GroupDto.swift in Sources */,

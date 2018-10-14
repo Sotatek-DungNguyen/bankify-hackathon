@@ -46,6 +46,7 @@ class GroupDoubtTableViewCell: UITableViewCell {
         if sender.isSelected {
             textField.isHidden = false
             lbTitle.isHidden = true
+            textField.text = "\(confirmation?.amount ?? 0)"
             textField.becomeFirstResponder()
         }
         else {

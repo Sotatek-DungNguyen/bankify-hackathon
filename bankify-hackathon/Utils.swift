@@ -325,12 +325,13 @@ class Utils {
     
     var userId: Int = 3
     let unit = "$"
+    let cunit = "ETH"
     
     private init() {}
 }
 
 func makeRequest(method: HTTPMethod, endPoint: String, params: Parameters? = nil, completion: @escaping (JSON?) -> Void, errorHandler: ((Error) -> Void)? = nil) {
-    request("http://10.83.1.55:8001/api/blinky/\(endPoint)", method: method, parameters: params, headers: nil)
+    request("http://103.97.124.29:8001/api/blinky/\(endPoint)", method: method, parameters: params, headers: nil)
         .responseJSON {
             response in
             switch response.result {
