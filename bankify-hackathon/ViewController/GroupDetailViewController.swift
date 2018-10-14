@@ -65,7 +65,7 @@ extension GroupDetailViewController: UIPageViewControllerDataSource, UIPageViewC
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        if let vc = previousViewControllers.first, let index = internalViewControllers.firstIndex(of: vc) {
+        if completed, let vc = previousViewControllers.first, let index = internalViewControllers.firstIndex(of: vc) {
             self.segmentControl.currentState = 1 - index
         }
     }
@@ -76,12 +76,16 @@ extension GroupDetailViewController: LUNSegmentedControlDelegate, LUNSegmentedCo
         return 2
     }
     
-    func segmentedControl(_ segmentedControl: LUNSegmentedControl!, titleForStateAt index: Int) -> String! {
+    func segmentedControl(_ segmentedControl: LUNSegmentedControl!, attributedTitleForStateAt index: Int) -> NSAttributedString! {
         switch index {
         case 0:
-            return "Co-saving"
+            return NSMutableAttributedString(string: "Co-saving", attributes: [
+                .font: UIFont(name: "Futura", size: 14)
+            ])
         default:
-            return "Debt"
+            return NSMutableAttributedString(string: "Debt", attributes: [
+                .font: UIFont(name: "Futura", size: 14)
+            ])
         }
     }
     

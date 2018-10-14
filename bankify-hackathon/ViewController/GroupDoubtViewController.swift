@@ -8,6 +8,7 @@
 
 import UIKit
 import Arrow
+import PullToRefresh
 
 class GroupDoubtViewController: AppViewController {
     
@@ -16,19 +17,31 @@ class GroupDoubtViewController: AppViewController {
     @IBOutlet weak var btnResolve: UIButton!
 
     fileprivate var isResolve = false
+    fileprivate var isDataLoading = false
     
     fileprivate var confirmations: [ConfirmationDto] = []
+    
+    deinit {
+        tableView.removeAllPullToRefresh()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
 //        updateConfirmLabel()
+        let refresher = PullToRefresh()
+        tableView.addPullToRefresh(refresher) {
+            [weak self] in
+            self?.loadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        loadData()
+        if !isResolve {
+            loadData()
+        }
     }
     
     func updateConfirmLabel() {
@@ -49,13 +62,17 @@ class GroupDoubtViewController: AppViewController {
     }
     
     func loadData() {
-        confirmations = []
+        if isDataLoading {
+            return
+        }
+        isDataLoading = true
         makeRequest(method: .get, endPoint: "getgroup", completion: {
             [weak self] json in
             guard let `self` = self else { return }
             var group: GroupDto = GroupDto()
             group <-- json
             let members = group.members
+            self.confirmations = []
             for member in members {
                 for dept in member.debts {
                     let confirmation = ConfirmationDto(ownerId: dept.id, debtUserId: member.id, amount: dept.amount, ownerUsername: members.first { $0.id == dept.id }?.name ?? "", deubtUsername: member.name, isConfirm: true)
@@ -65,8 +82,14 @@ class GroupDoubtViewController: AppViewController {
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.tableView.endRefreshing(at: .top)
+                self.isDataLoading = false
             }
-        })
+        }) {
+            [weak self] _ in
+            self?.isDataLoading = false
+            self?.tableView.endRefreshing(at: .top)
+        }
     }
 }
 
@@ -83,16 +106,20 @@ extension GroupDoubtViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell0", for: indexPath) as! GroupDoubtTableViewCell
         let confirmation = confirmations[indexPath.row]
         
+        cell.confirmation = confirmation
+        cell.textField.isHidden = true
+        
         if isResolve {
-            cell.lbTitle.text = "\(confirmation.ownerUsername) must send \(Utils.shared.unit)\(confirmation.amount) to \(confirmation.deubtUsername)"
+            cell.lbTitle.text = "\(confirmation.ownerUsername) must send \(Utils.shared.unit)\(confirmation.amount) to \(confirmation.debtUsername)"
             cell.delegate = nil
+            cell.btnEdit?.isHidden = true
         }
         else {
-            cell.lbTitle.text = "\(confirmation.deubtUsername) owed \(confirmation.ownerUsername) \(Utils.shared.unit)\(confirmation.amount)"
+            cell.lbTitle.text = "\(confirmation.debtUsername) owed \(confirmation.ownerUsername) \(Utils.shared.unit)\(confirmation.amount)"
             cell.delegate = self
+            cell.btnEdit?.isHidden = !confirmation.isMyOwe
         }
         
-        cell.btnEdit?.isHidden = !confirmation.isMyOwe
         cell.index = indexPath.row
         
 //        if confirmation.isMyTransaction {
@@ -132,6 +159,27 @@ extension GroupDoubtViewController: GroupDoubtTableViewCellDelegate {
         if let text = text, let optionalAmount = try? Double(text), let amount = optionalAmount {
             confirmations[cell.index].amount = amount
             self.tableView.reloadData()
+            
+            var params: [String: Any] = [
+                "id": Utils.shared.userId
+            ]
+            
+            var debts: [[String: Any]] = []
+            let owes = confirmations.filter { $0.isMyOwe }
+            for owe in owes {
+                let debt = [
+                    "id": owe.ownerId,
+                    "amount": owe.amount
+                    ] as [String : Any]
+                debts.append(debt)
+            }
+            
+            params["debts"] = debts
+            
+            makeRequest(method: .post, endPoint: "updategroup", params: params, completion: {
+                json in
+                
+            })
         }
     }
 }

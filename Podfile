@@ -5,17 +5,12 @@ target 'bankify-hackathon' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire'
-  pod 'Kingfisher', '4.9.0'
-  pod 'NVActivityIndicatorView'
   pod 'IBAnimatable'
-  pod 'RxSwift'
-  pod 'RxCocoa'
   pod 'Hero'
   pod 'SnapKit'
-  pod 'Realm'
-  pod 'RealmSwift'
   pod 'Arrow'
   pod 'LUNSegmentedControl'
+  pod 'PullToRefresher'
   # Pods for bankify-hackathon
 
 end

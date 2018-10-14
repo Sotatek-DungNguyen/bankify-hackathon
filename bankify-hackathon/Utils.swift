@@ -10,7 +10,6 @@ import SnapKit
 import AVFoundation
 import Alamofire
 import Arrow
-import RealmSwift
 
 func loadFontFrom(fileUrl: URL) -> (name: String, success: Bool) {
     guard let fontData = try? Data(contentsOf: fileUrl) as CFData else {
@@ -280,12 +279,6 @@ extension Array where Element : Equatable {
     }
 }
 
-extension Results {
-    func toArray() -> [Element] {
-        return Array(self)
-    }
-}
-
 #if swift(>=4.2)
 #else
 extension MutableCollection {
@@ -337,7 +330,7 @@ class Utils {
 }
 
 func makeRequest(method: HTTPMethod, endPoint: String, params: Parameters? = nil, completion: @escaping (JSON?) -> Void, errorHandler: ((Error) -> Void)? = nil) {
-    request("http://103.97.124.29:8001/api/blinky/\(endPoint)", method: method, parameters: params, headers: nil)
+    request("http://10.83.1.55:8001/api/blinky/\(endPoint)", method: method, parameters: params, headers: nil)
         .responseJSON {
             response in
             switch response.result {

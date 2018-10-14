@@ -30,14 +30,14 @@ struct ConfirmationDto: ArrowParsable {
     private var _ownerUsername: String
     private var _debtUsername: String
     
-    private var ownerId: Int
-    private var debtUserId: Int
+    private(set) var ownerId: Int
+    private(set) var debtUserId: Int
     var amount: Double
     
     var ownerUsername: String {
         return ownerId == Utils.shared.userId ? "You" : _ownerUsername
     }
-    var deubtUsername: String {
+    var debtUsername: String {
         return debtUserId == Utils.shared.userId ? "You" : _debtUsername
     }
     var isConfirm: Bool

@@ -21,6 +21,15 @@ class GroupDoubtTableViewCell: UITableViewCell {
     @IBOutlet weak var textField: UITextField!
     
     var index: Int = -1
+    var confirmation: ConfirmationDto? {
+        didSet {
+            guard let confirmation = self.confirmation else {
+                return
+            }
+            
+            textField.placeholder = "\(confirmation.debtUsername) owed \(confirmation.ownerUsername)"
+        }
+    }
     
     weak var delegate: GroupDoubtTableViewCellDelegate?
     
