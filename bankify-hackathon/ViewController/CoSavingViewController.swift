@@ -8,6 +8,7 @@
 
 import UIKit
 import Arrow
+import RxSwift
 
 class CoSavingViewController: UIViewController {
     @IBOutlet weak var lbCenterBalance: UILabel!
@@ -18,6 +19,8 @@ class CoSavingViewController: UIViewController {
     fileprivate var group: GroupDto = GroupDto()
     private var isDataLoaded = false
     private var isDataLoading = false
+    
+    var isEth = false
     
     private let xOffset = [40, 200, 100, 290, 250]
     private let yOffset = [40, 20, 300, 190, 50]
@@ -54,8 +57,8 @@ class CoSavingViewController: UIViewController {
         containerView.layer.sublayers?.forEach {
             $0.removeFromSuperlayer()
         }
-        let total = self.group.members.map { $0.amount }.reduce(0, { $0 + $1 })
-        lbCenterBalance.text = "\(total)"
+        let total = self.group.members.map { isEth ? $0.ethAmount : $0.amount }.reduce(0, { $0 + $1 })
+        lbCenterBalance.text = "\(total)\(isEth ? Utils.shared.cunit : Utils.shared.unit)"
         
         let center = centerView.center
         for (index, member) in group.members.enumerated() {
@@ -65,7 +68,7 @@ class CoSavingViewController: UIViewController {
             view.backgroundColor = .clear
             view.clipsToBounds = true
             view.layer.masksToBounds = true
-            view.set(amount: member.amount, userId: member.id)
+            view.set(amount: isEth ? member.ethAmount : member.amount, userId: member.id)
             self.containerView.addSubview(view)
         }
     }
@@ -88,15 +91,70 @@ class CoSavingViewController: UIViewController {
             [weak self] json in
             guard let `self` = self else { return }
             self.group <-- json
-            self.isDataLoading = false
-            self.isDataLoaded = true
-            DispatchQueue.main.async {
-                self.drawPaths()
+            if self.isEth {
+                self.loadEth()
+            }
+            else {
+                self.isDataLoading = false
+                self.isDataLoaded = true
+                DispatchQueue.main.async {
+                    self.drawPaths()
+                }
             }
         }) {
             [weak self] _ in
             self?.isDataLoading = false
             self?.isDataLoaded = true
         }
+    }
+    
+    func loadEth() {
+        var totalObservable: Observable<Double>!
+        for i in 0..<5 {
+            let observable: Observable<Double> = Observable.create {
+                subscribe in
+                makeRequest(method: .get, endPoint: "\(Utils.eth[i])/balance", completion: {
+                    [weak self] json in
+                    var amount: Double = 0
+                    amount <-- json
+                    subscribe.onNext(amount)
+                    subscribe.onCompleted()
+                    guard let `self` = self else { return }
+                    self.group.members[i].ethAmount = amount
+                }) {
+                    error in
+                    subscribe.onError(error)
+                }
+                
+                return Disposables.create()
+            }
+            
+            if totalObservable == nil {
+                totalObservable = observable
+            }
+            else {
+                totalObservable = Observable.zip(totalObservable, observable) {
+                    x, y -> Double in
+                    return x + y
+                }
+            }
+        }
+        
+        _ = totalObservable.subscribe(
+            onNext: {
+                _ in
+                
+                self.isDataLoading = false
+                self.isDataLoaded = true
+                DispatchQueue.main.async {
+                    self.drawPaths()
+                }
+            },
+            onError: {
+                [weak self] _ in
+                self?.isDataLoading = false
+                self?.isDataLoaded = true
+            }
+        )
     }
 }

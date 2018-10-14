@@ -13,13 +13,18 @@ class GroupDetailViewController: AppViewController {
     
     @IBOutlet weak var segmentControl: LUNSegmentedControl!
     
+    var isEth = false
+    
     fileprivate lazy var internalPageViewController: UIPageViewController = {
         return children.first { $0 is UIPageViewController } as! UIPageViewController
     }()
     
     fileprivate lazy var internalViewControllers: [UIViewController] = {
+        let coVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CoSavingViewController") as! CoSavingViewController
+        coVC.isEth = self.isEth
+        
         return [
-            UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CoSavingViewController"),
+            coVC,
             UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GroupDoubtViewController")
         ]
     }()

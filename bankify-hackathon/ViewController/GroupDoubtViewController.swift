@@ -9,6 +9,7 @@
 import UIKit
 import Arrow
 import PullToRefresh
+import Alamofire
 
 class GroupDoubtViewController: AppViewController {
     
@@ -22,7 +23,7 @@ class GroupDoubtViewController: AppViewController {
     fileprivate var confirmations: [ConfirmationDto] = []
     
     deinit {
-        tableView.removeAllPullToRefresh()
+        tableView?.removeAllPullToRefresh()
     }
     
     override func viewDidLoad() {
@@ -164,16 +165,20 @@ extension GroupDoubtViewController: GroupDoubtTableViewCellDelegate {
                 "id": Utils.shared.userId
             ]
             
-            var debts: [String] = []
+            var debts: [[String: Any]] = []
             let owes = confirmations.filter { $0.isMyOwe }
             for owe in owes {
-                let debt = "{\"id\":\(owe.ownerId),\"amount\":\(owe.amount)}"
+                let debt: [String : Any] = [
+                    "id": owe.ownerId,
+                    "amount": owe.amount
+                    ]
                 debts.append(debt)
             }
             
-            params["debts"] = "[" + debts.joined(separator: ",") + "]"
+            params["debts"] = debts
+            print(debts)
             
-            makeRequest(method: .post, endPoint: "updategroup", params: params, completion: {
+            makeRequest(method: .post, endPoint: "updategroup", params: params, encoding: JSONEncoding.default, completion: {
                 json in
                 print("Update OK")
             })

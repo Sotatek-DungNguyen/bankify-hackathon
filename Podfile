@@ -7,6 +7,7 @@ target 'bankify-hackathon' do
   pod 'Alamofire'
   pod 'IBAnimatable'
   pod 'Hero'
+  pod 'RxSwift'
   pod 'SnapKit'
   pod 'Arrow'
   pod 'LUNSegmentedControl'

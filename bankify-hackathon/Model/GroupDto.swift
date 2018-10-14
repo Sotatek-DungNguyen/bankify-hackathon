@@ -40,6 +40,8 @@ struct MemberDto: ArrowParsable {
     var name: String
     var index: Int
     var amount: Double
+    var ethAddress: String
+    var ethAmount: Double
     var debts: [Debt]
     
     init() {
@@ -47,7 +49,9 @@ struct MemberDto: ArrowParsable {
         name = ""
         index = 0
         amount = 0
+        ethAmount = 0
         debts = []
+        ethAddress = ""
     }
     
     mutating func deserialize(_ json: JSON) {
@@ -56,6 +60,7 @@ struct MemberDto: ArrowParsable {
         index <-- json["index"]
         var rawDebts: [Debt] = []
         rawDebts <-- json["debts"]
+        ethAddress = Utils.eth[id - 1]
         debts = rawDebts.filter { $0.amount > 0 }
     }
 }

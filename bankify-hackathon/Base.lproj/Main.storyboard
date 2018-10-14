@@ -79,8 +79,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topCollectBackground" translatesAutoresizingMaskIntoConstraints="NO" id="qy8-Zk-psK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="161"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleAct" translatesAutoresizingMaskIntoConstraints="NO" id="qy8-Zk-psK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -300,7 +300,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleGroupNew" translatesAutoresizingMaskIntoConstraints="NO" id="x2v-pK-yrP">
-                                <rect key="frame" x="0.0" y="262" width="375" height="356"/>
+                                <rect key="frame" x="0.0" y="284" width="375" height="356"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-Md-Y1b">
                                 <rect key="frame" x="16" y="141" width="343" height="64"/>
@@ -324,7 +324,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BK-Dt-CLv">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="64"/>
                                         <connections>
-                                            <segue destination="D6U-rQ-BCP" kind="show" id="uyE-R2-qUd"/>
+                                            <segue destination="D6U-rQ-BCP" kind="show" identifier="Cash" id="uyE-R2-qUd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -359,19 +359,79 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5be-xn-f9Y">
+                                <rect key="frame" x="16" y="210" width="343" height="64"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3cb-Ki-sdP">
+                                        <rect key="frame" x="16" y="15" width="178" height="34.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fun Ether" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phv-Qk-hXC">
+                                                <rect key="frame" x="0.0" y="0.0" width="178" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You, Dustin, Sevent and 2 others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80x-qa-FbB">
+                                                <rect key="frame" x="0.0" y="18.5" width="178" height="16"/>
+                                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="12"/>
+                                                <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96C-l8-neI">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="64"/>
+                                        <connections>
+                                            <segue destination="D6U-rQ-BCP" kind="show" identifier="Eth" id="ENC-Kz-tiE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3cb-Ki-sdP" firstAttribute="centerY" secondItem="5be-xn-f9Y" secondAttribute="centerY" id="E4P-yA-pbg"/>
+                                    <constraint firstAttribute="height" constant="64" id="Gy5-N5-AAK"/>
+                                    <constraint firstAttribute="bottom" secondItem="96C-l8-neI" secondAttribute="bottom" id="Xow-GF-JMk"/>
+                                    <constraint firstItem="96C-l8-neI" firstAttribute="top" secondItem="5be-xn-f9Y" secondAttribute="top" id="Znp-01-jLy"/>
+                                    <constraint firstItem="96C-l8-neI" firstAttribute="leading" secondItem="5be-xn-f9Y" secondAttribute="leading" id="k6f-00-5hd"/>
+                                    <constraint firstAttribute="trailing" secondItem="96C-l8-neI" secondAttribute="trailing" id="njo-kf-AU7"/>
+                                    <constraint firstItem="3cb-Ki-sdP" firstAttribute="leading" secondItem="5be-xn-f9Y" secondAttribute="leading" constant="16" id="rxq-SU-QA7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JhJ-Ci-QhL" firstAttribute="top" secondItem="Pen-VL-u3G" secondAttribute="top" id="3rZ-9O-q5w"/>
-                            <constraint firstItem="A8f-vW-2lz" firstAttribute="bottom" secondItem="x2v-pK-yrP" secondAttribute="bottom" id="TFM-BK-VcW"/>
                             <constraint firstItem="JhJ-Ci-QhL" firstAttribute="trailing" secondItem="A8f-vW-2lz" secondAttribute="trailing" id="U90-h6-Ueu"/>
                             <constraint firstItem="A8f-vW-2lz" firstAttribute="trailing" secondItem="x2v-pK-yrP" secondAttribute="trailing" id="Ugo-cU-d0F"/>
                             <constraint firstItem="JhJ-Ci-QhL" firstAttribute="leading" secondItem="A8f-vW-2lz" secondAttribute="leading" id="eFL-QD-3Ei"/>
+                            <constraint firstItem="5be-xn-f9Y" firstAttribute="leading" secondItem="mjR-Md-Y1b" secondAttribute="leading" id="ffb-DE-mPk"/>
                             <constraint firstItem="c1i-I7-7pA" firstAttribute="centerY" secondItem="JhJ-Ci-QhL" secondAttribute="centerY" id="hnZ-Ac-cdD"/>
                             <constraint firstItem="x2v-pK-yrP" firstAttribute="leading" secondItem="A8f-vW-2lz" secondAttribute="leading" id="hsz-Z8-Ezp"/>
                             <constraint firstItem="c1i-I7-7pA" firstAttribute="leading" secondItem="JhJ-Ci-QhL" secondAttribute="leading" constant="16" id="nQi-xp-VIh"/>
                             <constraint firstItem="mjR-Md-Y1b" firstAttribute="top" secondItem="JhJ-Ci-QhL" secondAttribute="bottom" constant="-20" id="piD-bT-Zn0"/>
+                            <constraint firstItem="5be-xn-f9Y" firstAttribute="top" secondItem="mjR-Md-Y1b" secondAttribute="bottom" constant="5" id="rGq-t1-Kwf"/>
                             <constraint firstItem="mjR-Md-Y1b" firstAttribute="leading" secondItem="A8f-vW-2lz" secondAttribute="leading" constant="16" id="rjP-hD-gKk"/>
+                            <constraint firstItem="x2v-pK-yrP" firstAttribute="top" secondItem="5be-xn-f9Y" secondAttribute="bottom" constant="10" id="sqR-pR-feE"/>
+                            <constraint firstItem="5be-xn-f9Y" firstAttribute="trailing" secondItem="mjR-Md-Y1b" secondAttribute="trailing" id="t7z-PS-ZP7"/>
                             <constraint firstItem="mjR-Md-Y1b" firstAttribute="centerX" secondItem="A8f-vW-2lz" secondAttribute="centerX" id="xDC-iF-oZI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A8f-vW-2lz"/>
@@ -380,7 +440,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pV9-yf-lxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1766" y="667"/>
+            <point key="canvasLocation" x="1765.5999999999999" y="666.56671664167925"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="zK7-7J-xwW">
@@ -441,7 +501,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar party, 14/10/2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8X-Bg-8ya">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar party, 10/14/2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8X-Bg-8ya">
                                         <rect key="frame" x="5" y="27" width="148" height="30"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -680,7 +740,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dEi-sO-rEO">
                                 <rect key="frame" x="71.5" y="39.5" width="232" height="41"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar party, 14/10/2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4br-Mc-GAi">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar party, 10/14/2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4br-Mc-GAi">
                                         <rect key="frame" x="0.0" y="0.0" width="232" height="22.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -704,7 +764,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="265" height="40"/>
                                                 <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rd9-Xy-bBy">
                                                 <rect key="frame" x="270" y="0.0" width="25" height="40"/>
@@ -968,7 +1028,7 @@
                                                             <rect key="frame" x="8" y="19.5" width="201" height="19"/>
                                                             <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                         </textField>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkd-8t-aGG">
                                                             <rect key="frame" x="214" y="9" width="121" height="40"/>
@@ -1063,7 +1123,17 @@
                     <view key="view" contentMode="scaleToFill" id="mvl-DF-lAs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleAcc" translatesAutoresizingMaskIntoConstraints="NO" id="e0O-Y7-LqJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e0O-Y7-LqJ" firstAttribute="top" secondItem="mvl-DF-lAs" secondAttribute="top" id="Jtl-5c-HUe"/>
+                            <constraint firstItem="NaW-7J-AOM" firstAttribute="trailing" secondItem="e0O-Y7-LqJ" secondAttribute="trailing" id="Ns6-gd-9dL"/>
+                            <constraint firstItem="e0O-Y7-LqJ" firstAttribute="leading" secondItem="NaW-7J-AOM" secondAttribute="leading" id="rPw-ou-JU5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NaW-7J-AOM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" id="mR4-Zf-9Th"/>
@@ -1146,10 +1216,15 @@
         <image name="collectButtonBackground" width="154" height="40"/>
         <image name="confirmBackgroundActive" width="121" height="40"/>
         <image name="samleHome" width="375" height="667"/>
+        <image name="sampleAcc" width="375" height="667"/>
+        <image name="sampleAct" width="375" height="667"/>
         <image name="sampleAvatar" width="1536" height="1536"/>
         <image name="sampleGroupNew" width="375" height="356"/>
         <image name="scanIcon" width="25" height="22"/>
         <image name="smallEthIcon" width="12" height="18"/>
         <image name="topCollectBackground" width="375" height="161"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="uyE-R2-qUd"/>
+    </inferredMetricsTieBreakers>
 </document>

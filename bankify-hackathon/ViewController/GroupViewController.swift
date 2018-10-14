@@ -17,4 +17,11 @@ class GroupViewController: AppViewController {
         self.navigationController?.tabBarController?.hidesBottomBarWhenPushed = true
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! GroupDetailViewController
+        
+        if segue.identifier == "Eth" {
+            vc.isEth = true
+        }
+    }
 }

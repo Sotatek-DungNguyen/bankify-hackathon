@@ -326,12 +326,19 @@ class Utils {
     var userId: Int = 3
     let unit = "$"
     let cunit = "ETH"
+    static let eth = [
+        "0x48F4c0BFB6Abe15558889AF1d7f6445e55444775",
+        "0x6794bC5EA9Aa9c46e1971003C9914D6DcaCe456e",
+        "0x699EdB7A74066b12A7BEECd9Cc3D2bF247E5F56f",
+        "0x10240f965943472E55050e477a93A2Ff40C0f4c6",
+        "0x626282B6Bf01E651789288292d5752ac4d10C62E"
+    ]
     
     private init() {}
 }
 
-func makeRequest(method: HTTPMethod, endPoint: String, params: Parameters? = nil, completion: @escaping (JSON?) -> Void, errorHandler: ((Error) -> Void)? = nil) {
-    request("http://103.97.124.29:8001/api/blinky/\(endPoint)", method: method, parameters: params, headers: nil)
+func makeRequest(method: HTTPMethod, endPoint: String, params: Parameters? = nil, encoding: ParameterEncoding = URLEncoding.default, completion: @escaping (JSON?) -> Void, errorHandler: ((Error) -> Void)? = nil) {
+    request("http://103.97.124.29:8001/api/blinky/\(endPoint)", method: method, parameters: params, encoding: encoding, headers: nil)
         .responseJSON {
             response in
             switch response.result {
